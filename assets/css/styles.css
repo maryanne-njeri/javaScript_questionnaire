@@ -87,6 +87,7 @@ html, body {
     background: rgb(91, 146, 234);
     color: #fff;
     font-size: large;
+    cursor: pointer;
 }
 
 .btn:hover {
