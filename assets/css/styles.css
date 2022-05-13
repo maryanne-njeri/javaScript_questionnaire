@@ -11,7 +11,8 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 .bg-image {
@@ -25,7 +26,7 @@ html, body {
 }
 
 .filter-blur {
-    background: rgba(240, 227, 227, 0.5);
+    background: rgba(8, 8, 8, 0.5);
     backdrop-filter: blur(4px);
     position: absolute;
     width: 100%;
@@ -52,7 +53,7 @@ html, body {
 
 .nav-menu li:last-child {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .nav-menu li a {
@@ -76,20 +77,25 @@ html, body {
 }
 
 .heading-container h1 {
-    font-size: x-large;
+    font-size: 30px;
     font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 500;
+    border-left: 4px solid rgb(91, 146, 234);
+    padding: 0 5px;
 }
 
 .btn {
     padding: 16px 32px;
     border: none;
     border-radius: 10px;
-    background: rgb(91, 146, 234);
-    color: #fff;
+    background: #fae740;
+    color: #3e507a;
     font-size: large;
     cursor: pointer;
 }
 
 .btn:hover {
-    background: rgb(27, 118, 179);
+    background: #b9a91b;
+    color: #fff;
 }
