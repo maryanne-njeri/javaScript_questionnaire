@@ -1,16 +1,5 @@
 (function() {
-    
     // Functions
-    function showQuizBoard() {
-        if (intro.style.display === 'none') {
-            intro.style.display = 'block';
-            board.style.display = 'none';
-        } else {
-            intro.style.display = 'none';
-            board.style.display = 'block';
-        }
-    }
-
     function buildQuiz() {
         // variable to store the HTML output
         const output = [];
@@ -68,7 +57,7 @@
             if(userAnswer === currentQuestion.correctAnswer) {
 
                 // add to the number of correct answers
-                numCorrect++;
+                numCorrect ++;
 
                 // color the answers green
                 answerContainers[questionNumber].style.color = 'lightgreen';
@@ -81,8 +70,14 @@
             }
         });
 
-        // show number of correct answers out of total
-        resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        if (numCorrect*20 >= 80) {
+            resultsContainer.innerHTML = `${numCorrect*20}% <p>Excellent &#128519;</p>`;
+            // show number of correct total score
+        } else if(numCorrect*20 >= 50) {
+            resultsContainer.innerHTML = `${numCorrect*20}% <p>Fair &#128522;</p>`;
+        } else {
+            resultsContainer.innerHTML = `${numCorrect*20}% <p>Poor &#128542;</p>`;
+        }
     }
 
     function showSlide(n) {
@@ -121,62 +116,85 @@
     }
 
     // Variables
-    const continue_btn = document.querySelector('.continue-btn');
-    const intro = document.querySelector('.intro');
-    const board = document.querySelector('.quiz-board');
     const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
     const myQuestions = [
-        {
-            question: "Who invented JavaScript?",
+        {     
+            question: "What are JavaScript Data Types ?",
             answers: {
-                a: "Douglas Crockford",
-                b: "Sheryl Sandberg",
-                c: "Brendan Eich"
+                a: "Number, String, Boolean, Object, Undefined",
+                b: "String",
+                c: "Boolean and Array",
+                d: "Undefined",
             },
-        
-            correctAnswer: "c"
+            
+            correctAnswer: "a",
 
         },
-        {
-            question: "Which one of these is a JavaScript package manager?",
-            answers: {
-                a: "Node.js",
-                b: "TypeScript",
-                c: "npm"
-            },
 
+        {
+            question: "Why Javascript ?",
+            answers: {
+                a: "Specifies the layout of web pages",
+                b: "To define the content of web pages",
+                c: "programs the behavior of web pages",
+                d: "It is a server language",
+            },
+            
             correctAnswer: "c"
         },
-        {
-            question: "Which tool can you use to ensure code quality?",
-            answers: {
-                a: "Angular",
-                b: "jQuery",
-                c: "RequireJS",
-                d: "ESLint"
-            },
 
-            correctAnswer: "d"
-        }
+        {
+            question: "What is the use of isNaN function ?",
+            answers: {
+                a: "Not available",
+                b: "isNan function returns true if the argument is not a number; otherwise, it is false.",
+                c: "isNaN function returns true when argument is a number",
+                d: "It is still not known",
+            },
+            
+            correctAnswer: "b",
+        },
+
+        {
+            question: "Which company developed JavaScript ?",
+            answers: {
+                a: "Java",
+                b: "Netscape",
+                c: "Google",
+                d: "Firefox",
+            },
+    
+            correctAnswer: "b",
+        },
+
+        {
+            question: "What is 'this' keyword in JavaScript ?",
+            answers: {
+                a: "Grammatical keyword",
+                b: "None of the above",
+                c: "referencial keyword",
+                d: "'This' keyword refers to the object from where it was called.",
+            },
+            
+            correctAnswer: "d",
+        },
     ];
 
-    
     // Kick things off
     buildQuiz();
-    
+
     // Pagination
     const previousButton = document.getElementById("previous");
     const nextButton = document.getElementById("next");
     const slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
-    
+
     // Show the first slide
     showSlide(currentSlide);
     
     // Event listeners
-    continue_btn.addEventListener('click', showQuizBoard);
     submitButton.addEventListener('click', showResults);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
