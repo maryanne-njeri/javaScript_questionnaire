@@ -1,7 +1,7 @@
 (function() {
     // Functions
-    function buildQuiz() {
-        // variable to store the HTML output
+    function quizBuilder() {
+        // output variable to store the HTML output
         const output = [];
 
         // for each question...
@@ -11,10 +11,10 @@
             // variable to store the list of possible answers
             const answers = [];
 
-            // and for each available answer...
+            // for each available answer...
             for(letter in currentQuestion.answers){
 
-                // ...add an HTML radio button
+                // add an HTML radio button
                 answers.push(
                     `<label>
                     <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -33,7 +33,7 @@
             );
         });
 
-        // finally combine our output list into one string of HTML and put it on the page
+        // Combine our output list into one string of HTML and put it on the page
         quizContainer.innerHTML = output.join('');
     }
 
@@ -182,16 +182,14 @@
         },
     ];
 
-    // Kick things off
-    buildQuiz();
+    quizBuilder();
 
-    // Pagination
     const previousButton = document.getElementById("previous");
     const nextButton = document.getElementById("next");
     const slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
 
-    // Show the first slide
+    // first slide
     showSlide(currentSlide);
     
     // Event listeners
