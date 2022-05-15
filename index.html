@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionnaires</title>
-
-    <!-- Custome Css -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Custom css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,40 +15,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="bg-image">
-        <div class="filter-blur">
-            <nav>
-                <ul class="nav-menu">
-                    <li>
-                        <a href="/">
-                            <img src="assets/images/logo.png" alt="" class="logo">
-                        </a>
-                    </li>
-                    <li><a href="/">Home</a></li>
-                </ul>
-            </nav>
-            <div class="hero-container">
-                <div class="intro">
-                    <h1>Welcome to Computer Club Questionnaires!</h1>
-
-                    <!-- show quiz board on click -->
-                    <button class="continue-btn">Continue</button>
-                </div>
-                <div class="quiz-board">
-                    <h2>Quiz Board</h2>
-                    <div class="quiz-section">
-
-                        <div id="quiz"></div>
-
-                        <button id="previous">Previous Quiz</button>
-                        <button id="next">Next Quiz</button>
-                        <button id="submit">Submit Quiz</button>
-                    </div>
-                </div>
-            </div>
+    <!-- Navigation menu -->
+    <nav>
+        <ul class="nav-menu">
+            <li>
+                <a href="/">
+                    <img src="assets/images/logo.png" alt="" class="logo">
+                </a>
+            </li>
+            <li><a href="/">Home</a></li>
+        </ul>
+        <div class="heading">
+            <h1>Logeto Computer Club Quiz</h1>
+            <p>-- We <em>lead</em>, they follow --</p>
         </div>
-    </div>
-    <script src="assets/js/app.js"></script>
+    </nav>
+    <main>
+        <div class="quiz-section">
+            <!-- Quiz -->
+            <div class="quiz-container">
+                <div id="quiz"></div>
+            </div>
+        
+            <!-- button -->
+            <button id="previous">Previous Question</button>
+            <button id="next">Next Question</button>
+            <button id="submit">Submit Quiz</button>
+        
+            <!-- results -->
+            <!-- <div id="results"></div> -->
+        </div>
+        <div class="side-img">
+            <div id="results"></div>
+        </div>
+
+    </main>
+    
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>
