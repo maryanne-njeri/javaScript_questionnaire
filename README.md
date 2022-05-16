@@ -10,24 +10,24 @@
 
 By the end of the this project, the following tasks **Must** have been completed
 
-- [] The project uses two or more javascript functions.
-- [] The project uses Vanilla CSS to make it visually appealing.
-- [] The project uses forms to collect user data. 
+- [x] The project uses two or more javascript functions.
+- [x] The project uses Vanilla CSS to make it visually appealing.
+- [x] The project uses forms to collect user data. 
 
 > Technical Requirements
-- [] The project should contain a well-documented README markdown file.
-- [] The project should be polished in a portfolio quality state.
-- [] The project should contain regular git commits with appropriate commit messages associated with them.
-- [] The working project should be deployed and the link to the live site provided on the Github repository.
-- [] The business logic and UI logic of the code should be separated.
-- [] The project code should be consistently indented & follows proper syntax which includes camelcase and appropriate naming of variables.
+- [x] The project should contain a well-documented README markdown file.
+- [x] The project should be polished in a portfolio quality state.
+- [x] The project should contain regular git commits with appropriate commit messages associated with them.
+- [x] The working project should be deployed and the link to the live site provided on the Github repository.
+- [x] The business logic and UI logic of the code should be separated.
+- [x] The project code should be consistently indented & follows proper syntax which includes camelcase and appropriate naming of variables.
 
 > Further Exploration
 When you're done working on the project and it works well achieving the required functionality, you can go a step further & add the functionality that lets a student know their overall performance using the following criteria:
 
-- [] If a student scores more than 80% of the total score, the application lets them know that they have excellently passed.
-- [] If a student scores between 50% to 80% of the total score, the application lets them know that they have fairly passed.
-- [] If a student scores below 50% of the total score, the application lets them know that they have scored poorly and they need to retake the test.
+- [x] If a student scores more than 80% of the total score, the application lets them know that they have excellently passed.
+- [x] If a student scores between 50% to 80% of the total score, the application lets them know that they have fairly passed.
+- [x] If a student scores below 50% of the total score, the application lets them know that they have scored poorly and they need to retake the test.
 
 
 
